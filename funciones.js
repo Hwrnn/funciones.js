@@ -63,20 +63,18 @@ const saludar=function (nombre){
 
 // 4. Funciones Flecha
 // 4.1 Convierte la siguiente función en una función flecha llamada multiplicarFlecha:
-// function multiplicar(a, b) {
-//     return a * b;
-// }
-const multiplicar = (a, b) => a*b
-    // Tu código aquí
+const multiplicarFlecha = (a, b) => {
+    const resultado = a * b;
+    return resultado;
+};
 
 // 4.2 Crea una función flecha llamada `saludarFlecha` que reciba un parámetro `nombre` y devuelva "Hola [nombre]".
   const saludarFlecha = (nombre) => "Hola "+ nombre
 // 4.3 Escribe una función flecha llamada `calcularArea` que reciba el radio de un círculo y devuelva el área del círculo. Usa la fórmula A = π * r².
-function calcularArea(radio) {
-}
-const calcularArea = (radio)=> (3.14*(radio**2))
-
+    const calcularArea = (radio) => Math.PI * Math.pow(radio, 2);
 // 5. Recursividad
+// 5.1 Escribe una función que calcule la suma de los primeros n números enteros de forma recursiva. Por ejemplo: `suma(3) -> 1 + 2 + 3 = 6`
+/ 5. Recursividad
 // 5.1 Escribe una función que calcule la suma de los primeros n números enteros de forma recursiva. Por ejemplo: `suma(3) -> 1 + 2 + 3 = 6`
 function suma(n) {
     if (n === 0) {
@@ -84,7 +82,7 @@ function suma(n) {
     }
     return n + suma(n - 1);
 }
-
+// 5.2 Escribe una función que calcule la sucesión de Fibonacci de forma recursiva. La sucesión de Fibonacci es una serie de números que empieza por 0 y 1 y cada número es la suma de los dos anteriores. Por ejemplo: `fibonacci(6) -> 8`
 function fibonacci(n) {
     if (n === 0) {
         return 0;
