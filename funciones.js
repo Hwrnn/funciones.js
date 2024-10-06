@@ -77,40 +77,35 @@ const multiplicarFlecha = (a, b) => {
 / 5. Recursividad
 // 5.1 Escribe una función que calcule la suma de los primeros n números enteros de forma recursiva. Por ejemplo: `suma(3) -> 1 + 2 + 3 = 6`
 function suma(n) {
-    if (n === 0) {
-        return 0;
-    }
-    return n + suma(n - 1);
+  if (n === 0) {
+    return 0;
+  }
+  return n + suma(n - 1);
 }
 // 5.2 Escribe una función que calcule la sucesión de Fibonacci de forma recursiva. La sucesión de Fibonacci es una serie de números que empieza por 0 y 1 y cada número es la suma de los dos anteriores. Por ejemplo: `fibonacci(6) -> 8`
-function fibonacci(n) {
-    if (n === 0) {
-        return 0;
-    }
-    if (n === 1) {
-        return 1;
-    }
-    return fibonacci(n - 1) + fibonacci(n - 2);
+function fibonacci(n, memo = []) {
+  if (n <= 1) return n;
+  if (memo[n] !== undefined) return memo[n];
+  memo[n] = fibonacci(n - 1, memo) + fibonacci(n - 2, memo);
+  return memo[n];
 }
-
 
 
 // 5.3 Crea una función recursiva llamada `factorial` que calcule el factorial de un número. El factorial de n (n!) es el producto de todos los números enteros positivos menores o iguales a n.
 function factorial(n) {
-    if (n === 0 || n === 1) {
-      return 1
-    } else {
-      return n * factorial(n - 1)
-    }
+  if (n === 0 || n === 1) {
+    return 1;
   }
-// 5.4 Escribe una función recursiva que calcule la potencia de un número dado el exponente. Por ejemplo: `potencia(2, 3) -> 8`
-function potencia(base, exponente) {
-    if (exponente === 0) {
-        return 1;
-    }
-    return base * potencia(base, exponente - 1);
+  return n * factorial(n - 1);
 }
 
+// 5.4 Escribe una función recursiva que calcule la potencia de un número dado el exponente. Por ejemplo: `potencia(2, 3) -> 8`
+function potencia(base, exponente) {
+  if (exponente === 0) {
+    return 1;
+  }
+  return base * potencia(base, exponente - 1);
+}
 // Exportar las funciones para que puedan ser probadas
 module.exports = {
     despedir,
