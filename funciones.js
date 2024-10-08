@@ -74,7 +74,7 @@ const multiplicarFlecha = (a, b) => {
     const calcularArea = (radio) => Math.PI * Math.pow(radio, 2);
 // 5. Recursividad
 // 5.1 Escribe una función que calcule la suma de los primeros n números enteros de forma recursiva. Por ejemplo: `suma(3) -> 1 + 2 + 3 = 6`
-/ 5. Recursividad
+// 5. Recursividad
 // 5.1 Escribe una función que calcule la suma de los primeros n números enteros de forma recursiva. Por ejemplo: `suma(3) -> 1 + 2 + 3 = 6`
 function suma(n) {
   if (n === 0) {
